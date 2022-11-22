@@ -1,0 +1,6 @@
+p=int(input("enter value:"))
+t=int(input("enter value:"))
+p=p+t
+t=p-t
+p=p-t
+print("p value:",p,"\nt value:",t)
