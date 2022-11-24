@@ -1,0 +1,10 @@
+a=int(input())
+b=int(input())
+add=a+b
+sub=a-b
+mul=a*b
+div=a/b
+fdiv=a//b
+mdiv=a%b
+exp=a**b
+print("addition:",add,"\nsubtraction:",sub,"\nmultiplication:",mul,"\ndivision:",div,"\nfloor division:",fdiv,"\nmodule division:",mdiv,"\nexponentiation:",exp)
