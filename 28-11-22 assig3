@@ -1,0 +1,4 @@
+bal=int(input("enter balance"))
+amt=int(input("enter amt to credit"))
+main_bal=bal+amt
+print("YOUR MAIN BALANCE IS:",main_bal)
