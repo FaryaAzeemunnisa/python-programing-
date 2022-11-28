@@ -1,0 +1,6 @@
+my_pin=2909
+pin=int(input())
+if(my_pin==pin):
+    print("CONTINUE THE TRANSCATION")
+else:
+    print("INCORRECT PIN, 'PLEASE TRY AGAIN!!!'")
