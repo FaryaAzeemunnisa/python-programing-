@@ -1,0 +1,52 @@
+book=80
+color_pen=100
+pasta=180
+pencils=50
+chocolate=100
+cphno=input('Enter custmer phone number')
+cname=input('Enter custmer name')
+caddr=input('Enter custmer address')
+bookq=int(input('Enter quantity of book'))
+colorq=int(input('Enter quantity of color pen'))
+pastarq=int(input('Enter quantity of pasta'))
+pencilsq=int(input('Enter quantity of pencils'))
+chocoq=int(input('Enter quantity of chocolate'))
+coupon=input('Enter coupon code')
+bill=(book*bookq)+(color_pen*colorq)+(pasta*pastarq)+(pencils*pencilsq)+(chocolate*chocoq)
+print('Total bill =',bill)
+if bill>3000:
+    tax=bill*5/100
+elif bill>2000:
+    tax=bill*7/100
+elif bill>1000:
+    tax=bill*10/100
+elif bill>500:
+    tax=bill*7/100
+else:
+    tax=100
+if coupon=='DIWALI' and bill>=5000:
+    dis=bill*10/100
+    
+elif coupon=='DIWALI' and bill>=3000:
+    dis=bill*6/100
+elif coupon=='DIWALI' and bill>=1000:
+    dis=bill*4/100
+else:
+    dis=0
+if coupon=='CHRISMAS' and bill>=3000:
+    dis=bill*20/100        
+elif coupon=='CHRISMAS' and bill>=2000:
+    dis=bill*10/100
+elif coupon=='CHRISMAS' and bill>=1000:
+    dis=bill*5/100
+else:
+    dis=0
+print('Bill without tax',bill)
+print('Tax',tax)
+print('Discount',dis)
+bill=bill+tax-dis
+tax=tax+bill
+print('Customer phone number',cphno)
+print('Customer name',cname)
+print('Tax ',tax)
+print('Bill ',bill)
