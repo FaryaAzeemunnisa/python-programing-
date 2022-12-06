@@ -1,0 +1,4 @@
+n=input()
+x=len(n)
+for i in range(x,0,-1):
+    print(int(i),end=" ")
