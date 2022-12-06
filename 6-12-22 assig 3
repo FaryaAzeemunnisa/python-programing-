@@ -1,0 +1,10 @@
+n=input()
+sum=0
+for i in n:
+    r=int(i)
+    sum=sum+(r*r*r)
+sum=str(sum)
+if(n==sum):
+    print("armstrong")
+else:
+    print("not armstrong")
