@@ -1,0 +1,8 @@
+n=int(input())
+x=[]
+for i in range(n):
+    y=int(input())
+    x.append(y)
+print(x)
+print(x[0],x[2],x[4])
+print(x[0:n:2])
