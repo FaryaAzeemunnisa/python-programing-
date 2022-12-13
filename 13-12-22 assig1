@@ -1,0 +1,7 @@
+n=int(input())
+state=[]
+for i in range(n):
+    x=input("enter state:")
+    state.append(x)
+state.sort()
+print(state)
