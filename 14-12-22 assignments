@@ -1,0 +1,37 @@
+assig-1
+*********************************
+l=[]
+n=int(input())
+l=list(map(int,input().split()))
+max=min=l[0]
+for i in range(n):
+    if max<l[i]:
+        max=l[i]
+    if min>l[i]:
+        min=l[i]
+print(max,min)
+       
+assig -2
+**************************************
+l=[]
+n=int(input())
+l=list(map(int,input().split()))
+for i in range(0,n-1):
+    for j in range(i+1,n):
+        if l[j]>l[i]:
+            m=l[j]
+            l[j]=l[i]
+            l[i]=m
+print(l)
+
+assig-3
+*****************************************
+l=[]
+n=int(input())
+l=list(map(int,input().split()))
+m=set(l)
+m=list(m)
+if l==m:
+    print("no")
+else:
+    print("yes")
