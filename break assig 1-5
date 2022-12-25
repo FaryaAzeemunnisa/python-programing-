@@ -1,0 +1,50 @@
+assignment-1
+______________________________________
+n=input()
+m=n[::-1]
+if n==m:
+    print("PALINDROME")
+else:
+    print("NOT PALINDROME")
+    
+********************************************
+assignment-2
+____________________________________________
+m=int(input())
+if m%4==0 and m%100!=0:
+     print("LEAP YEAR")
+elif m%100==0:
+    print("LEAP YEAR")
+else:
+    print("NOT LEAP YEAR")
+*********************************************
+assignment-3
+_____________________________________________
+m=int(input())
+f1=0
+f2=1
+for i in range(m):
+    f3=f1+f2
+    f1=f2
+    f2=f3
+    print(f3)
+ **************************************************
+ assignment-4
+ ______________________________________________
+ m=(input())
+p=[]
+for i in m:
+    p.append(int(i))
+print(max(p),min(p))
+****************************************************
+assignment-5
+_________________________________________________
+n=int(input())
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count=count+1
+if count==2:
+    print("PRIME")
+else:
+    print("NOT PRIME")
