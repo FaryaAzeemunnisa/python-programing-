@@ -1,0 +1,89 @@
+assignment-6
+_______________________
+def hn(n):
+    h=0
+    while(n!=0):
+        r=n%10
+        h=h+r
+        n=n/10
+    return h
+n=int(input())
+while(n>9):
+    n=hn(n)
+if(n==1 or n==7):
+    print("happy number")
+else:
+    print("not happy number")
+************************************************************************
+assignment-7
+________________________________________
+n=int(input())
+sum=0
+for i in range(1,n):
+    if n%i==0:
+        sum=sum+i
+if sum==n:
+    print("perfect")
+else:
+    print("not perfect")
+*****************************************************************************
+assignment-8
+________________________________________________
+m=int(input())
+n=int(input())
+for i in range(m,n):
+    if i%4==0 and i%100!=0:
+        print(i,'=LEAP YEAR')
+    elif i%100==0:
+        print(i,"=LEAP YEAR")
+    else:
+        print(i,"=NOT LEAP YEAR")
+**********************************************************
+assignment-9
+__________________________________________
+n=int(input())
+f1=0
+f2=1
+sum=0
+for i in range(n):
+    f3=f1+f2
+    f1=f2
+    f2=f3
+    print(f3)
+    sum=sum+f3
+print(sum)
+***********************************************
+assignment-10
+___________________________________
+n=int(input())
+m=int(input())
+for i in range(n,m):
+    c=0
+    for j in range(1,i+1):
+        if i%j==0:
+            c=c+1
+    if c==2:
+        print(i)
+***************************************************
+assignment-11
+__________________________________________
+n=int(input())
+m=int(input())
+sum=0
+for i in range(n,m):
+    c=0
+    for j in range(1,i+1):
+        if i%j==0:
+            c=c+1
+    if c==2:
+        sum=sum+i
+print("SUM=",sum)
+**********************************************************
+assignment-12
+___________________________________________
+n=int(input())
+mul=1
+for i in range(1,n+1):
+    mul=mul*i
+print(mul)
+
