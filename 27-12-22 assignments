@@ -1,0 +1,39 @@
+A-1
+************************
+n=int(input())
+l=list(map(int,input().split()))
+sear=int(input())
+if sear in l: 
+    print('Element found')
+    print('at',l.index(sear))
+else:
+    print('Element not found')
+_____________________________________________________
+A-2
+**************************************
+l1=[1,7,3,7,4,5]
+l2=[i for i in range(len(l1)) if l1[i]==7]
+print(l2)
+______________________________________________________
+A-3
+***************************************
+n=int(input())
+l=list(map(int,input().split()))
+x=int(input())
+low=0
+high=n-1
+flag=0
+mid=(low+high)//2
+while high>=low:
+    if x>l[mid]:
+        low=mid+1
+    elif x==l[mid]:
+        flag=1
+        break
+    else:
+        high=mid-1
+    mid=(low+high)//2
+if flag==1:
+    print('Element is found at',mid,'Index')
+else:
+    print('Element not found')
