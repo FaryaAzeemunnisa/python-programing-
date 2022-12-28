@@ -1,0 +1,51 @@
+A-1
+________________________________________________
+from tkinter import *
+def Numbers():
+    res=int(e1.get())+int(e2.get())
+    res2=int(e1.get())-int(e2.get())
+    res3=int(e1.get())*int(e2.get())
+    res4=int(e1.get())/int(e2.get())
+    s.set(res)
+    s.set(res2)
+    s.set(res3)
+    s.set(res4)
+    
+cal = Tk()
+s=StringVar()
+Label(cal, text="First").grid(row=0)
+Label(cal, text="Second").grid(row=1)
+Label(cal, text="Result:").grid(row=3)
+result=Label(cal, text="", textvariable=s).grid(row=3,column=1)
+e1 = Entry(cal)
+e2 = Entry(cal)
+e1.grid(row=0, column=1)
+e2.grid(row=1, column=1)
+b = Button(cal, text="Addition", command=Numbers)
+b.grid(row=4)
+b2 = Button(cal, text="Substraction", command=Numbers)
+b2.grid(row=5)
+b3 = Button(cal, text="Multiplication", command=Numbers)
+b3.grid(row=6)
+b4 = Button(cal, text="Division", command=Numbers)
+b4.grid(row=7)
+mainloop()
+________________________________________________________________________
+A-2
+__________________________________________________
+n=int(input())
+res=n-1
+l=[]
+s=str(res)
+for i in s:
+    l.append(int(i))
+print(l)
+______________________________________________
+A-3
+___________________________________________________
+n=list(input())
+m=len(n)//2
+o=n[:m]
+l=n[m:]
+l=l[::-1]
+print(o+l)
