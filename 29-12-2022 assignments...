@@ -1,0 +1,71 @@
+A-1
+__________________________________________
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'rotLeft' function below.
+#
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY a
+#  2. INTEGER d
+#
+
+def rotLeft(a, d):
+    x=len(a)
+    for i in range(0,d):
+        f=a[0]
+        for j in range(0,x-1):
+            a[j]=a[j+1]
+        a[x-1]=f
+    return a
+        
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = int(first_multiple_input[0])
+
+    d = int(first_multiple_input[1])
+
+    a = list(map(int, input().rstrip().split()))
+
+    result = rotLeft(a, d)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
+    ****************************************************************
+    A-2
+_____________________________________________________________
+x=[1,2,2,4,5]
+n=len(x)
+c=0
+for i in range(0,n):
+    for j in range(i+1,n):
+        if x[i]==x[j]:
+            x.remove(i)
+            x.remove(j)
+print(x)
+
+******************************************************************
+A-3
+_______________________________________
+l=[]
+n=input()
+l=list(map(int,input().split()))
+even_count=0
+
+for num in l:
+    if num % 2 == 0:
+        even_count += 1
+ 
+print(even_count)
