@@ -1,0 +1,46 @@
+A=1
+_____________________________________________
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    l=[[i,j,k] for i in range(0,x+1) for j in range(0,y+1) for k in range(0,z+1) if i+j+k!=n]
+    print(l)
+***************************************************************************************************
+A=2
+____________________________________________
+n=int(input())
+S=[]
+p=0
+for i in range(0,n):
+    o=[]
+    for j in range(0,n):
+        x=int(input())
+        o.append(x)
+    S.append(i)
+for i in range(n):
+    for j in range(n):
+        if i+j==n-1:
+            print(S[i][j])
+*******************************************************************
+A=3
+_______________________________________________________
+n=int(input())
+S=[]
+p=0
+k=0
+for i in range(0,n):
+    o=[]
+    for j in range(0,n):
+        x=int(input())
+        o.append(x)
+    S.append(i)
+for i in range(n):
+    for j in range(n):
+        if i==j:
+            p=p+S[i][j]
+        if i+j==n-1:
+            k=k+S[i][j]
+print(p-k)
+*******************************************
