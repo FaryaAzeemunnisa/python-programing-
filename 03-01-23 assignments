@@ -11,36 +11,38 @@ if __name__ == '__main__':
 A=2
 ____________________________________________
 n=int(input())
-S=[]
-p=0
+sum=0
+l=[]
 for i in range(0,n):
-    o=[]
+    w=[]
     for j in range(0,n):
         x=int(input())
-        o.append(x)
-    S.append(i)
-for i in range(n):
-    for j in range(n):
+        w.append(x)
+    l.append(w)
+for i in range(0,n):
+    for j in range(0,n):
         if i+j==n-1:
-            print(S[i][j])
+            sum=sum+l[i][j]
+print(sum)
 *******************************************************************
 A=3
 _______________________________________________________
 n=int(input())
-S=[]
-p=0
-k=0
+sum=0
+r=0
+l=[]
 for i in range(0,n):
-    o=[]
+    w=[]
     for j in range(0,n):
         x=int(input())
-        o.append(x)
-    S.append(i)
-for i in range(n):
-    for j in range(n):
-        if i==j:
-            p=p+S[i][j]
+        w.append(x)
+    l.append(w)
+for i in range(0,n):
+    for j in range(0,n):
         if i+j==n-1:
-            k=k+S[i][j]
-print(p-k)
+            sum=sum+l[i][j]
+        if i==j:
+            r=r+l[i][j]
+            
+print(sum-r)
 *******************************************
