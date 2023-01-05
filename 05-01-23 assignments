@@ -1,0 +1,36 @@
+A-1
+_________________________________________
+n=int(input())
+l=[]
+k=int(input())
+for i in range(0,n):
+    w=[]
+    for j in range(0,n):
+        x=int(input())
+        w.append(x)
+    l.append(w)
+for i in range(0,n):
+    for j in range(0,n):
+        if i+j==n-1:
+            l[i][j]=k
+        else:
+            l[i][j]=0
+print(l)
+*******************************************************
+A-2
+____________________________________
+n=int(input())
+l=list(map(int,input().split()))
+for i in l:
+    if i%2==0:
+        l.remove(i)
+print(l)
+***************************************************
+A-3
+______________________________
+k=int(input())
+n=int(input())
+l=list(map(int,input().split()))
+l.sort()
+m=l[-k:]
+print(max(m)-min(m))
