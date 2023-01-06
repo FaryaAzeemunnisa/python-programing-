@@ -1,0 +1,37 @@
+A-1
+______________________
+l=list(map(int,input().split()))
+u=[]
+d=[]
+for i in l:
+    if i not in u:
+        u.append(i)
+    else:
+        d.append(i)
+print(u)
+**************************************
+A-2
+________________________________
+em=input()
+c=0
+if em.endswith('@gmail.com'):
+    c=1
+    print("you are using gmail account")
+if em.endswith('@outlook.com'):
+    c=1
+    print("you are using microsoft account")
+if em.endswith('@yahoo.com'):
+    c=1
+    print("you are using yahoo account")
+if c!=1:
+    print("unidentified id")
+***********************************************
+A-3
+________________________________
+em=input()
+phno=input()
+j=phno[0]
+if em.endswith('@gmail.com') or em.endswith('@yahoo.com') or em.endswith('@outlook.com') and len(phno)==10 and j>5:
+    print("registered successfully")
+else:
+    print("check your details")
