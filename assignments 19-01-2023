@@ -1,0 +1,56 @@
+A-1
+________________________________
+def isBalanced(s):
+    # Write your code here
+    while(True):
+        if '[]' in s:
+            s=s.replace('[]','')
+        elif '()' in s:
+            s=s.replace('()','')
+        elif '{}' in s:
+            s=s.replace('{}','')
+        else:
+           return not s 
+    if isBalanced(s):
+        print('Yes')
+    else:
+        print('No')
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        s = input()
+
+        #result = isBalanced(s)
+        if isBalanced(s):
+            result='YES'
+        else:
+            result='NO'
+
+        fptr.write(result + '\n')
+
+    fptr.close()
+****************************************
+A-2
+______________________
+s=input()
+len=len(s)
+for i in range(len):
+    for j in range(len-i):
+        print(s[j], end=' ')
+
+    print()
+***************************************
+A-3
+_____________________________
+s=input()
+r=int(input())
+n=len(s)
+d=''
+for i in range(0,n):
+    for j in range(0,r):
+        d=d+s[i]
+print(d)
