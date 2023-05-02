@@ -1,0 +1,43 @@
+assig-1
+*********************************
+l=list(map(int,input().split()))
+d={}
+for i in l:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]=d[i]+1
+m=list(d.values())
+r=min(m)#4
+for i in d:
+    if d[i]==r:
+        print(i)
+_________________________________________________________________
+assig-2
+*********************************
+l=list(map(int,input().split()))
+d={}
+for i in l:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]=d[i]+1
+m=list(d.values())
+r=min(m)
+e=max(m)
+for i in d:
+    if d[i]==e:
+        max=d[i]
+    elif d[i]==r:
+        min=d[i]
+print(max-min)
+__________________________________________________________________
+assig-3
+*******************************
+n=int(input())
+l=[]
+for i in range(n):
+    x=int(input())
+    l.append(x)
+print("max=",max(l))
+print("min=",min(l))
