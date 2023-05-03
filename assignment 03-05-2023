@@ -1,0 +1,33 @@
+assig -1
+***********************
+n=int(input())          
+d={}
+for i in range(n):
+    name,result=input().split()
+    d[name]=result
+call=input()
+for i in d:
+    if i==call:
+        print(call,d[name]+'ed the exam')
+_______________________________
+assig-2
+******************
+par=input()          
+d={}
+for i in par:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]=d[i]+1
+l=list(d.values())
+max=max(l)
+for i in d:
+    if max==d[i]:
+        print(i,':',d[i])
+________________________________
+assig-3
+n=int(input())
+s=1
+for i in range(1,n+1):
+    s=s*i
+print(s)
