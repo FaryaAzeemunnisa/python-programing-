@@ -1,0 +1,39 @@
+assig-1
+********************************
+class year:
+    def ly(self,m):
+        if m%4==0 and m%100!=0:
+            print("LEAP YEAR")
+        elif m%100==0:
+            print("LEAP YEAR")
+        else:
+            print("NOT LEAP YEAR")
+m=int(input())
+n=year()
+n.ly(m)
+____________________________________________
+assig-2
+********************************
+class operation:
+    def palindrome(self,m):
+        x=m[::-1]
+        if x==m:
+            print("palindrome")
+        else:
+            print("not palindrome")
+m=input()
+n=operation()
+n.palindrome(m)
+_____________________________________________________
+assig-3
+************************************
+class operation:
+    def febo(self,m):
+        f1,f2=0,1
+        for i in range(0,m):
+            f3=f1+f2
+            f1,f2=f2,f3
+            print(f3)
+m=int(input())
+n=operation()
+n.febo(m)
