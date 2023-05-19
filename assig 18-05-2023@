@@ -1,0 +1,151 @@
+assig- 1
+*****************************************************
+#max sub array
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        maxsub=nums[0]
+        n=len(nums)
+        cursum=0
+        for i in range(0,n):
+            cursum=cursum+nums[i]
+            if (cursum>maxsub):
+                maxsub=cursum
+            if cursum<0:
+                cursum=0
+         return maxsub
+___________________________________________________________
+assig-2
+****************************************************
+ #count of subarray sum less than k
+l=list(map(int,input().split()))
+k=int(input())
+n=len(1)
+c=0
+for i in range(0,n):
+    sum=0
+    for j in range(i,n):
+        if sum+l[j]<k:
+            sum=sum+l[j]
+            c=c+1
+        else:
+            break
+print(c)
+_________________________________________________________-
+assig- 3
+*****************************************************
+#count of subarray sum greater than k
+l=list(map(int,input().split()))
+k=int(input())
+n=len(1)
+c=0
+for i in range(0,n):
+    sum=0
+    for j in range(i,n):
+        if sum+l[j]>k:
+            sum=sum+l[j]
+            c=c+1
+        else:
+            break
+print(c)
+_______________________________________________
+assig- 4
+*************************************************
+#count of subarray sum=k?
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        c=0
+        pfsum=0
+        n=len(nums)
+        d={0:1}
+        for i in range(0,n):
+            pfsum=pfsum+nums[i]
+            if pfsum-k in d:
+                c=c+d[pfsum-k]
+            if pfsum not in d:
+                d[pfsum]=1
+            else:
+                d[pfsum]=d[pfsum]+1
+        return c
+__________________________________________________
+assig- 5
+*************************************************
+ #subarray product less than or equal to  k
+nums=[10,5,2,6]
+k=100
+l=0
+c,p= 0, 1
+for i in range(len(nums)):
+    p*=nums[i]
+    if p<=k:
+        c+=i-l+1
+    else:
+        while l<=i and p>k:
+            p = p / nums[l]
+            l += 1
+        c += i-l+1
+print(c)
+__________________________________________
+assig- 6
+**************************************
+#leetcode subarray product greater  than or equal to k
+nums=[10,5,2,6]
+k=100
+l=0
+c,p= 0, 1
+for i in range(len(nums)):
+    p*=nums[i]
+    if p>=k:
+        c+=i-l+1
+    else:
+        while l<=i and p< k:
+            p = p / nums[l]
+            l += 1
+        c += i-l+1
+print(c)
+___________________________________________
+assig-7
+***********************************************
+#factorial w/o using loop
+def factof(n):
+    if n==0:
+        return 1
+    else:
+        return n*factof(n-1)
+n=int(input())
+print(factof(n))
+___________________________________________________
+assig-8
+******************************************************
+#power of two
+class Solution:
+    def isPowerOfTwo(self,n):
+        if n==1:
+            return True
+        elif n%2==1:
+            return False
+        else:
+            return n>1 and self.isPowerOfTwo(n//2)
+_____________________________________________________________
+assig-9
+**********************************************************
+#power of three
+class Solution:
+    def isPowerOfTwo(self,n):
+        if n==1:
+            return True
+        elif n%3>=1:
+            return False
+        else:
+            return n>1 and self.isPowerOfTwo(n//3)
+_____________________________________________________
+assig-10
+*******************************************
+#power of four
+class Solution:
+    def isPowerOfTwo(self,n):
+        if n==1:
+            return True
+        elif n%4>=1:
+            return False
+        else:
+            return n>1 and self.isPowerOfTwo(n//4)
