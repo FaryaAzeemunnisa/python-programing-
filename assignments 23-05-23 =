@@ -1,0 +1,39 @@
+A-1
+__________________________________________________
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        m=max(nums)
+        n=min(nums)
+        r=1
+        for i in range(2,n+1):
+            print(i)
+            if m%i==0 and n%i==0:
+                r=i
+        return r
+__________________________________________________
+A-2
+___________________________________________________
+class Solution:
+    def find_permutation(self, S):
+        if len(S)==0:
+            arr=[]
+            arr.append('')
+            return arr
+        output=[]
+        for i in range(len(S)):
+            smallOut=self.find_permutation(S[0:i]+S[i+1:])
+            for j in smallOut:
+                output.append(S[i]+j)
+        output2=[]
+        for i in output:
+            if i in output2:
+                pass
+            else:
+                output2.append(i)
+        return sorted(output2)
+___________________________________________________
+A-3
+___________________________________________________
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        return list(itertools.permutations(nums,len(nums)))
